@@ -30,3 +30,9 @@ h2{
         color:white;
     }
 }
+
+@media (max-width: 1000px) {
+    body { 
+        column-count: 2;
+    }
+}

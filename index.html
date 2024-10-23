@@ -1,29 +1,63 @@
 <!DOCTYPE html>
+
+<!--
+    Titling webpage and linking to css
+-->
 <head>
     <title>Khoi's Page</title>
     <link rel="stylesheet" href="prog1style.css">
 </head>
+
+<!--
+    Main Body of the page
+-->
 <body>
-    <h1>Khoi Truong's Page
+
+    <h1>
+        Khoi Truong's Page
     </h1>
+
+    <!--
+        A gif of a koi fish swimming
+        the transform is because it was originally swimming toward the left and I wanted to have it swim across the page to the right
+    -->
     <img style="position:absolute; transform: scaleX(-1); display: block; left: 400px;" src="koi swimming.webp" height="100px" >
 
+    <!--
+        Two buttons to change the look of the page.
+        Mostly just changes the color of the main body, will turn off after a second click
+    -->
     <button id="darkMode" onclick="goDark()">Dark Mode</button>
     <button id="neonMode" onclick="goNeon()">Neon Mode</button>
+
+    <!--
+        Link to my GitHub page
+    -->
     <p>
         <a href="https://github.com/khoi-d-truong">My Github</a>
     </p>
 
+    <!--
+        A rough table of contents, links to the rest of the page
+    -->
     <p> 
         <a href="#Courses">Courses</a> 
         <a href="#Projects">Projects</a>
         <a href="#Skills">Skills</a>
     </p>
 
+    <!--
+        Main portion of the text
+    -->
     <div id="Main Body">
+
     <h2 id="Courses">
         Courses Taken
     </h2>
+
+    <!--
+        A list of all the courses I've taken. ID'd so that css can change column count
+    -->
     <ul id="CourseList">
         <li>MATH1550</li>
         <li>MATH1552</li>
@@ -54,6 +88,9 @@
         <li>ENGL2009</li>
     </ul>
 
+    <!--
+        Quick list of some of the projects I've worked on. 2 of the projects I couldn't find the repository for
+    -->
     <h2 id="Projects">
         Projects
     </h2>
@@ -63,6 +100,9 @@
         <li> Visual Novel Dating Sim for CSC 3380</li>
     </ul>
 
+<!--
+    Quick list of skills
+-->
     <h2 id="Skills">
         Skills
     </h2>
@@ -73,6 +113,10 @@
     </ul>
 </div>
 
+<!--
+    3 js variables. first two are booleans to check if neon or dark mode is activated
+    bodyStyle is a variable to manipulate the styling through js functions
+-->
 <script>
     var neonOn = false;
     var darkOn = false;
@@ -80,6 +124,10 @@
 
 </script>
 
+<!--
+    2 functions to change the styling of the page
+    they both have an if-else to check if they have been turned on yet or not
+-->
 <script>
     function goNeon(){
         if (!neonOn){
@@ -100,12 +148,14 @@
             bodyStyle.classList.remove("DarkMode")
             darkOn = false;
         }
-    };
-  
-        
+    };     
     
 </script>
 
+<!--
+    js to have the gif of the koi fish swim across the top of the screen
+    resets when it gets to the other side of the screen
+-->
 <script>
     var img = document.getElementsByTagName('img')[0];
     img.style.position = 'absolute';

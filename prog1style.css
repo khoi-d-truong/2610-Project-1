@@ -1,3 +1,6 @@
+/**
+    Default styling for the page
+*/
 body{
     font-family: monospace;
 }
@@ -15,11 +18,17 @@ h2{
     border-bottom: 1px solid black;
 }
 
+/**
+    Cutting the course list into 2 columns, will change when on mobile
+*/
 #CourseList{
     column-count: 2;
     font-size: small;
 }
 
+/**
+    Neon styling for the page
+*/
 .NeonMode{
     background-color: chartreuse;
     color:red;
@@ -28,6 +37,9 @@ h2{
     }
 }
 
+/**
+    Dark mode styling for the page
+*/
 .DarkMode{
     background-color: darkslategrey;
     color:white;
@@ -36,6 +48,10 @@ h2{
     }
 }
 
+/**
+    Changes the styling whenever the screen is less than 1000px wide (i.e. on mobile)
+    Increases font size for readability and adds an extra column
+*/
 @media (max-width: 1000px) {
     #CourseList { 
         column-count: 3;

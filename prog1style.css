@@ -17,6 +17,7 @@ h2{
 
 #CourseList{
     column-count: 2;
+    font-size: small;
 }
 
 .NeonMode{
@@ -38,5 +39,7 @@ h2{
 @media (max-width: 1000px) {
     #CourseList { 
         column-count: 3;
+        font-size: larger;
     }
 }
+

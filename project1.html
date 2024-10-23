@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <title>Khoi's Page</title>
+    <link rel="stylesheet" href="prog1style.css">
+</head>
+<body>
+    <h1>Khoi Truong's Page
+    </h1>
+    <img style="position:absolute; transform: scaleX(-1); display: block; left: 400px;" src="koi swimming.webp" height="100px" >
+
+    <button id="darkMode" onclick="goDark()">Dark Mode</button>
+    <button id="neonMode" onclick="goNeon()">Neon Mode</button>
+    <p>
+        <a href="https://github.com/khoi-d-truong">My Github</a>
+    </p>
+
+    <p> 
+        <a href="#Courses">Courses</a> 
+        <a href="#Projects">Projects</a>
+        <a href="#Skills">Skills</a>
+    </p>
+
+    <div id="Main Body">
+    <h2 id="Courses">
+        Courses Taken
+    </h2>
+    <ul>
+        <li>MATH1550</li>
+        <li>MATH1552</li>
+        <li>MATH2090</li>
+        <li>IE3302</li>
+        <li>ASTR1101</li>
+        <li>ASTR1102</li>
+        <li>ASTR1108</li>
+        <li>ASTR1109</li>
+        <li>CMST1064</li>
+        <li>ENGL2202</li>
+        <li>HNRS2013</li>
+        <li>CSC1253</li>
+        <li>PHIL1000</li>
+        <li>CSC1351</li>
+        <li>CSC2259</li>
+        <li>CSC2262</li>
+        <li>CSC2730</li>
+        <li>CSC3102</li>
+        <li>CSC3200</li>
+        <li>CSC3380</li>
+        <li>CSC3501</li>
+        <li>CSC4101</li>
+        <li>CSC4103</li>
+        <li>CSC4402</li>
+        <li>CSC4740</li>
+        <li>CSC2463</li>
+        <li>ENGL2009</li>
+    </ul>
+
+    <h2 id="Projects">
+        Projects
+    </h2>
+    <ul>
+        <li> <a href="https://github.com/khoi-d-truong/CSC-2463-final">Final for CSC 2463</a> - A small game utilizing p5 and Arduino</li>
+        <li> A Buisiness Database program for CSC 4402</li>
+        <li> Visual Novel Dating Sim for CSC 3380</li>
+    </ul>
+
+    <h2 id="Skills">
+        Skills
+    </h2>
+    <ul>
+        <li>Experience in Java, JavaScript, Python, C++, SQL, and Hadoop</li>
+        <li>8 Years of work experience, ranging from teaching to the service industry</li>
+        <li>Leadership experience from Managerial position</li>
+    </ul>
+</div>
+
+<script>
+    var neonOn = false;
+    var darkOn = false;
+    var bodyStyle = document.getElementById("Main Body");
+
+</script>
+
+<script>
+    function goNeon(){
+        if (!neonOn){
+           bodyStyle.classList.add("NeonMode")
+            neonOn = true;
+        }
+        else{
+            bodyStyle.classList.remove("NeonMode")
+            neonOn = false;
+        }
+    };
+    function goDark(){
+        if (!darkOn){
+            bodyStyle.classList.add("DarkMode")
+            darkOn = true;
+        }
+        else{
+            bodyStyle.classList.remove("DarkMode")
+            darkOn = false;
+        }
+    };
+  
+        
+    
+</script>
+
+<script>
+    var img = document.getElementsByTagName('img')[0];
+    img.style.position = 'absolute';
+    img.style.left = '500px';
+
+
+    function swimLeft(){
+        var oldLeft = parseInt(img.style.left);
+        var newLeft = oldLeft+10;
+        img.style.left = newLeft + 'px';
+        if (img.style.left === '1200px') img.style.left= '500px';
+    }
+    window.setInterval(swimLeft,50);
+    </script>
+
+</body>

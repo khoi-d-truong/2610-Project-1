@@ -1,0 +1,32 @@
+body{
+    font-family: monospace;
+}
+
+h1{
+    font-size:xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+    border-bottom: 1px solid black;
+}
+
+.NeonMode{
+    background-color: chartreuse;
+    color:red;
+    a{
+        color:aqua
+    }
+}
+
+.DarkMode{
+    background-color: darkslategrey;
+    color:white;
+    a{
+        color:white;
+    }
+}

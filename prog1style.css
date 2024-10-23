@@ -15,6 +15,10 @@ h2{
     border-bottom: 1px solid black;
 }
 
+#CourseList{
+    column-count: 2;
+}
+
 .NeonMode{
     background-color: chartreuse;
     color:red;
@@ -32,7 +36,7 @@ h2{
 }
 
 @media (max-width: 1000px) {
-    body { 
-        column-count: 2;
+    #CourseList { 
+        column-count: 3;
     }
 }
